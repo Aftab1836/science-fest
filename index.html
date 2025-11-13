@@ -1,1067 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>District Level Science Exhibition Registration Form</title>
-    <style>
-        :root {
-  /* Primitive Color Tokens */
-  --color-white: rgba(255, 255, 255, 1);
-  --color-black: rgba(0, 0, 0, 1);
-  --color-cream-50: rgba(252, 252, 249, 1);
-  --color-cream-100: rgba(255, 255, 253, 1);
-  --color-gray-200: rgba(245, 245, 245, 1);
-  --color-gray-300: rgba(167, 169, 169, 1);
-  --color-gray-400: rgba(119, 124, 124, 1);
-  --color-slate-500: rgba(98, 108, 113, 1);
-  --color-brown-600: rgba(94, 82, 64, 1);
-  --color-charcoal-700: rgba(31, 33, 33, 1);
-  --color-charcoal-800: rgba(38, 40, 40, 1);
-  --color-slate-900: rgba(19, 52, 59, 1);
-  --color-teal-300: rgba(50, 184, 198, 1);
-  --color-teal-400: rgba(45, 166, 178, 1);
-  --color-teal-500: rgba(33, 128, 141, 1);
-  --color-teal-600: rgba(29, 116, 128, 1);
-  --color-teal-700: rgba(26, 104, 115, 1);
-  --color-teal-800: rgba(41, 150, 161, 1);
-  --color-red-400: rgba(255, 84, 89, 1);
-  --color-red-500: rgba(192, 21, 47, 1);
-  --color-orange-400: rgba(230, 129, 97, 1);
-  --color-orange-500: rgba(168, 75, 47, 1);
-
-  --color-brown-600-rgb: 94, 82, 64;
-  --color-teal-500-rgb: 33, 128, 141;
-  --color-slate-900-rgb: 19, 52, 59;
-  --color-slate-500-rgb: 98, 108, 113;
-  --color-red-500-rgb: 192, 21, 47;
-  --color-red-400-rgb: 255, 84, 89;
-  --color-orange-500-rgb: 168, 75, 47;
-  --color-orange-400-rgb: 230, 129, 97;
-
-  --color-bg-1: rgba(59, 130, 246, 0.08);
-  --color-bg-2: rgba(245, 158, 11, 0.08);
-  --color-bg-3: rgba(34, 197, 94, 0.08);
-  --color-bg-4: rgba(239, 68, 68, 0.08);
-  --color-bg-5: rgba(147, 51, 234, 0.08);
-  --color-bg-6: rgba(249, 115, 22, 0.08);
-  --color-bg-7: rgba(236, 72, 153, 0.08);
-  --color-bg-8: rgba(6, 182, 212, 0.08);
-
-  --color-background: var(--color-cream-50);
-  --color-surface: var(--color-cream-100);
-  --color-text: var(--color-slate-900);
-  --color-text-secondary: var(--color-slate-500);
-  --color-primary: var(--color-teal-500);
-  --color-primary-hover: var(--color-teal-600);
-  --color-primary-active: var(--color-teal-700);
-  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
-  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
-  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
-  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
-  --color-btn-primary-text: var(--color-cream-50);
-  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
-  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
-  --color-error: var(--color-red-500);
-  --color-success: var(--color-teal-500);
-  --color-warning: var(--color-orange-500);
-  --color-info: var(--color-slate-500);
-  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
-  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
-
-  --focus-ring: 0 0 0 3px var(--color-focus-ring);
-  --focus-outline: 2px solid var(--color-primary);
-  --status-bg-opacity: 0.15;
-  --status-border-opacity: 0.25;
-
-  --color-success-rgb: 33, 128, 141;
-  --color-error-rgb: 192, 21, 47;
-  --color-warning-rgb: 168, 75, 47;
-  --color-info-rgb: 98, 108, 113;
-
-  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  --font-size-xs: 11px;
-  --font-size-sm: 12px;
-  --font-size-base: 14px;
-  --font-size-md: 14px;
-  --font-size-lg: 16px;
-  --font-size-xl: 18px;
-  --font-size-2xl: 20px;
-  --font-size-3xl: 24px;
-  --font-size-4xl: 30px;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 550;
-  --font-weight-bold: 600;
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.5;
-  --letter-spacing-tight: -0.01em;
-
-  --space-0: 0;
-  --space-1: 1px;
-  --space-2: 2px;
-  --space-4: 4px;
-  --space-6: 6px;
-  --space-8: 8px;
-  --space-10: 10px;
-  --space-12: 12px;
-  --space-16: 16px;
-  --space-20: 20px;
-  --space-24: 24px;
-  --space-32: 32px;
-
-  --radius-sm: 6px;
-  --radius-base: 8px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
-  --radius-full: 9999px;
-
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
-
-  --duration-fast: 150ms;
-  --duration-normal: 250ms;
-  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
-
-  --container-sm: 640px;
-  --container-md: 768px;
-  --container-lg: 1024px;
-  --container-xl: 1280px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-gray-400-rgb: 119, 124, 124;
-    --color-teal-300-rgb: 50, 184, 198;
-    --color-gray-300-rgb: 167, 169, 169;
-    --color-gray-200-rgb: 245, 245, 245;
-
-    --color-bg-1: rgba(29, 78, 216, 0.15);
-    --color-bg-2: rgba(180, 83, 9, 0.15);
-    --color-bg-3: rgba(21, 128, 61, 0.15);
-    --color-bg-4: rgba(185, 28, 28, 0.15);
-    --color-bg-5: rgba(107, 33, 168, 0.15);
-    --color-bg-6: rgba(194, 65, 12, 0.15);
-    --color-bg-7: rgba(190, 24, 93, 0.15);
-    --color-bg-8: rgba(8, 145, 178, 0.15);
-
-    --color-background: var(--color-charcoal-700);
-    --color-surface: var(--color-charcoal-800);
-    --color-text: var(--color-gray-200);
-    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
-    --color-primary: var(--color-teal-300);
-    --color-primary-hover: var(--color-teal-400);
-    --color-primary-active: var(--color-teal-800);
-    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
-    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
-    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
-    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
-    --color-error: var(--color-red-400);
-    --color-success: var(--color-teal-300);
-    --color-warning: var(--color-orange-400);
-    --color-info: var(--color-gray-300);
-    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
-    --color-btn-primary-text: var(--color-slate-900);
-    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
-    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
-    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
-
-    --color-success-rgb: var(--color-teal-300-rgb);
-    --color-error-rgb: var(--color-red-400-rgb);
-    --color-warning-rgb: var(--color-orange-400-rgb);
-    --color-info-rgb: var(--color-gray-300-rgb);
-  }
-}
-
-@font-face {
-  font-family: 'FKGroteskNeue';
-  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
-}
-
-html {
-  font-size: var(--font-size-base);
-  font-family: var(--font-family-base);
-  line-height: var(--line-height-normal);
-  color: var(--color-text);
-  background-color: var(--color-background);
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-/* Custom styles for the form */
-.form-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--space-24);
-  min-height: 100vh;
-}
-
-.form-header {
-  text-align: center;
-  margin-bottom: var(--space-32);
-  padding: var(--space-24);
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-card-border);
-  box-shadow: var(--shadow-sm);
-}
-
-.form-title {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text);
-  margin-bottom: var(--space-12);
-  line-height: var(--line-height-tight);
-}
-
-.form-description {
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
-  margin: 0;
-}
-
-.progress-indicator {
-  text-align: center;
-  margin-bottom: var(--space-24);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  font-weight: var(--font-weight-medium);
-}
-
-.section {
-  display: none;
-  background: var(--color-surface);
-  padding: var(--space-32);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-card-border);
-  box-shadow: var(--shadow-md);
-}
-
-.section.active {
-  display: block;
-}
-
-.section-title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
-  margin-bottom: var(--space-24);
-  padding-bottom: var(--space-16);
-  border-bottom: 2px solid var(--color-border);
-}
-
-.form-group {
-  margin-bottom: var(--space-20);
-}
-
-.form-label {
-  display: block;
-  margin-bottom: var(--space-8);
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-base);
-  color: var(--color-text);
-}
-
-.form-label.required::after {
-  content: ' *';
-  color: var(--color-error);
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: var(--space-12);
-  font-size: var(--font-size-base);
-  line-height: 1.5;
-  color: var(--color-text);
-  background-color: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-base);
-  transition: border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
-  font-family: var(--font-family-base);
-}
-
-.form-control:focus {
-  border-color: var(--color-primary);
-  outline: none;
-  box-shadow: var(--focus-ring);
-}
-
-.form-control.error {
-  border-color: var(--color-error);
-}
-
-textarea.form-control {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.error-message {
-  display: none;
-  margin-top: var(--space-4);
-  font-size: var(--font-size-sm);
-  color: var(--color-error);
-}
-
-.error-message.visible {
-  display: block;
-}
-
-.radio-group, .checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-12);
-}
-
-.radio-option, .checkbox-option {
-  display: flex;
-  align-items: center;
-  gap: var(--space-8);
-  padding: var(--space-12);
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-base);
-  cursor: pointer;
-  transition: all var(--duration-fast) var(--ease-standard);
-}
-
-.radio-option:hover, .checkbox-option:hover {
-  background: var(--color-secondary);
-}
-
-.radio-option input[type="radio"],
-.checkbox-option input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-  accent-color: var(--color-primary);
-}
-
-.radio-option label,
-.checkbox-option label {
-  cursor: pointer;
-  flex: 1;
-  font-weight: var(--font-weight-normal);
-}
-
-.form-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: var(--space-32);
-  gap: var(--space-16);
-}
-
-.btn {
-  padding: var(--space-12) var(--space-24);
-  border-radius: var(--radius-base);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
-  cursor: pointer;
-  transition: all var(--duration-normal) var(--ease-standard);
-  border: none;
-  font-family: var(--font-family-base);
-}
-
-.btn-primary {
-  background: var(--color-primary);
-  color: var(--color-btn-primary-text);
-}
-
-.btn-primary:hover {
-  background: var(--color-primary-hover);
-}
-
-.btn-primary:active {
-  background: var(--color-primary-active);
-}
-
-.btn-secondary {
-  background: var(--color-secondary);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-}
-
-.btn-secondary:hover {
-  background: var(--color-secondary-hover);
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.btn-next, .btn-submit {
-  margin-left: auto;
-}
-
-.success-message {
-  display: none;
-  text-align: center;
-  padding: var(--space-32);
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-card-border);
-  box-shadow: var(--shadow-md);
-}
-
-.success-message.visible {
-  display: block;
-}
-
-.success-icon {
-  font-size: 48px;
-  color: var(--color-success);
-  margin-bottom: var(--space-16);
-}
-
-.success-title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
-  margin-bottom: var(--space-12);
-}
-
-.success-text {
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
-}
-
-@media (max-width: 640px) {
-  .form-container {
-    padding: var(--space-16);
-  }
-  
-  .section {
-    padding: var(--space-20);
-  }
-  
-  .form-title {
-    font-size: var(--font-size-2xl);
-  }
-  
-  .section-title {
-    font-size: var(--font-size-xl);
-  }
-}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District Level Science Exhibition Registration Form</title>
+<style>
+  body {font-family: Arial, sans-serif; background-color: #f3f6fb; color: #333; margin: 20px;}
+  h2 {color: #0056b3;}
+  .section {background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1);}
+  label {display: block; margin-top: 10px; font-weight: bold;}
+  input, textarea, select {width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc;}
+  button {background-color: #0056b3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;}
+  button:hover {background-color: #003d80;}
+</style>
 </head>
 <body>
-    <div class="form-container">
-        <div class="form-header">
-            <h1 class="form-title">District Level Science Exhibition Registration Form / ज़िला स्तरीय विज्ञान प्रदर्शनी पंजीकरण फॉर्म / ضلع سطح کی سائنسی نمائش رجسٹریشن فارم</h1>
-            <p class="form-description">(To be filled by the participating schools) / (प्रतिभागी स्कूलों द्वारा भरा जाना है) / (حصہ لینے والے اسکولوں کے ذریعہ بھرا جائے)</p>
-        </div>
 
+<h2>District Level Science Exhibition Registration Form<br>
+ज़िला स्तरीय विज्ञान प्रदर्शनी पंजीकरण फॉर्म<br>
+ضلع سطح کی سائنسی نمائش رجسٹریشن فارم</h2>
+<p>(To be filled by the participating schools)<br>
+(प्रतिभागी स्कूलों द्वारा भरा जाना है)<br>
+(حصہ لینے والے اسکولوں کے ذریعہ بھرا جائے)</p>
 
+<form id="registrationForm">
 
-        <div class="progress-indicator" id="progressIndicator">
-            <span id="progressText">Section 1 of 6 / अनुभाग 1 का 6 / سیکشن 1 کا 6</span>
-        </div>
+<!-- A. School Information -->
+<div class="section">
+  <h3>A. School Information / A. स्कूल की जानकारी / A. اسکول کی معلومات</h3>
+  <label>Name of the School / स्कूल का नाम / اسکول کا نام</label>
+  <input type="text" name="schoolName" required>
 
-        <form id="registrationForm">
-            <!-- Section 1: School Information -->
-            <div class="section active" data-section="1">
-                <h2 class="section-title">A. School Information / A. स्कूल की जानकारी / A. اسکول کی معلومات</h2>
-                
-                <div class="form-group">
-                    <label class="form-label required">Name of the School / स्कूल का नाम / اسکول کا نام</label>
-                    <input type="text" class="form-control" id="school_name" name="school_name" placeholder="Enter school name / स्कूल का नाम दर्ज करें / اسکول کا نام درج کریں" required>
-                    <div class="error-message" id="error_school_name">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>School Address / स्कूल का पता / اسکول کا پتہ</label>
+  <textarea name="schoolAddress" required></textarea>
 
-                <div class="form-group">
-                    <label class="form-label required">School Address / स्कूल का पता / اسکول کا پتہ</label>
-                    <textarea class="form-control" id="school_address" name="school_address" placeholder="Enter complete school address / पूर्ण स्कूल पता दर्ज करें / مکمل اسکول کا پتہ درج کریں" required></textarea>
-                    <div class="error-message" id="error_school_address">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Medium / माध्यम / میڈیم</label>
+  <input type="text" name="medium" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Medium / माध्यम / میڈیم</label>
-                    <input type="text" class="form-control" id="medium" name="medium" placeholder="e.g., English, Hindi, Both / उदा. अंग्रेजी, हिंदी, दोनों / مثال کے طور پر، انگریزی، ہندی، دونوں" required>
-                    <div class="error-message" id="error_medium">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Government / Private school / सरकारी / निजी स्कूल / سرکاری / پرائیویٹ اسکول</label>
+  <select name="schoolType" required>
+    <option value="Government">Government / सरकारी / سرکاری</option>
+    <option value="Private">Private / निजी / پرائیویٹ</option>
+  </select>
 
-                <div class="form-group">
-                    <label class="form-label required">Government / Private school / सरकारी / निजी स्कूल / سرکاری / پرائیویٹ اسکول</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="school_type_gov" name="school_type" value="government" required>
-                            <label for="school_type_gov">Government / सरकारी / سرکاری</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="school_type_pvt" name="school_type" value="private">
-                            <label for="school_type_pvt">Private / निजी / پرائیویٹ</label>
-                        </div>
-                    </div>
-                    <div class="error-message" id="error_school_type">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Name of the Principal / Head of Institution / प्रिंसिपल / संस्था प्रमुख का नाम / پرنسپل / ادارے کے سربراہ کا نام</label>
+  <input type="text" name="principalName" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Name of the Principal / Head of Institution / प्रिंसिपल / संस्था प्रमुख का नाम / پرنسپل / ادارے کے سربراہ کا نام</label>
-                    <input type="text" class="form-control" id="principal_name" name="principal_name" placeholder="Enter principal/head name / प्रिंसिपल/प्रमुख का नाम दर्ज करें / پرنسپل/سربراہ کا نام درج کریں" required>
-                    <div class="error-message" id="error_principal_name">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Contact Number of the School / स्कूल का संपर्क नंबर / اسکول کا رابطہ نمبر</label>
+  <input type="text" name="contactNumber" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Contact Number of the School / स्कूल का संपर्क नंबर / اسکول کا رابطہ نمبر</label>
-                    <input type="tel" class="form-control" id="school_contact" name="school_contact" placeholder="Enter phone number / फोन नंबर दर्ज करें / فون نمبر درج کریں" required>
-                    <div class="error-message" id="error_school_contact">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Email ID of the School / स्कूल का ईमेल आईडी / اسکول کا ای میل آئی ڈی</label>
+  <input type="email" name="email" required>
+</div>
 
-                <div class="form-group">
-                    <label class="form-label required">Email ID of the School / स्कूल का ईमेल आईडी / اسکول کا ای میل آئی ڈی</label>
-                    <input type="email" class="form-control" id="school_email" name="school_email" placeholder="Enter email address / ईमेल पता दर्ज करें / ای میل کا پتہ درج کریں" required>
-                    <div class="error-message" id="error_school_email">Please enter a valid email / कृपया एक वैध ईमेल दर्ज करें / براہ کرم ایک درست ای میل درج کریں</div>
-                </div>
+<!-- B. Science Projects -->
+<div class="section">
+  <h3>B. Science Projects / B. विज्ञान परियोजनाएं / B. سائنسی پروجیکٹس</h3>
+  <label>Total number of projects for display</label>
+  <input type="number" name="totalProjects" required>
 
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-primary btn-next" onclick="nextSection()">Next / अगला / اگلا</button>
-                </div>
-            </div>
+  <label>Title of any one project (which will be presented on stage)</label>
+  <input type="text" name="projectTitle" required>
 
-            <!-- Section 2: Science Projects -->
-            <div class="section" data-section="2">
-                <h2 class="section-title">B. Science Projects / B. विज्ञान परियोजनाएं / B. سائنسی پروجیکٹس</h2>
-                
-                <div class="form-group">
-                    <label class="form-label required">Total number of projects for display / प्रदर्शन के लिए परियोजनाओं की कुल संख्या / نمائش کے لیے پروجیکٹس کی کل تعداد</label>
-                    <input type="number" class="form-control" id="total_projects" name="total_projects" min="1" placeholder="Enter number / संख्या दर्ज करें / نمبر درج کریں" required>
-                    <div class="error-message" id="error_total_projects">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Total number of students participating in Science Projects</label>
+  <input type="number" name="totalStudentsProjects" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Title of any one project (which will be projected/presented on stage) / किसी एक परियोजना का शीर्षक (जो मंच पर प्रस्तुत की जाएगी) / کسی ایک پروجیکٹ کا عنوان (جسے اسٹیج پر پیش کیا جائے گا)</label>
-                    <input type="text" class="form-control" id="project_title" name="project_title" placeholder="Enter project title / परियोजना का शीर्षक दर्ज करें / پروجیکٹ کا عنوان درج کریں" required>
-                    <div class="error-message" id="error_project_title">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Name of the teacher in charge</label>
+  <input type="text" name="teacherProjects" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Total number of students participating in Science Projects / विज्ञान परियोजनाओं में भाग लेने वाले छात्रों की कुल संख्या / سائنسی پروجیکٹس میں حصہ لینے والے طلباء کی کل تعداد</label>
-                    <input type="number" class="form-control" id="total_students_projects" name="total_students_projects" min="1" placeholder="Enter number / संख्या दर्ज करें / نمبر درج کریں" required>
-                    <div class="error-message" id="error_total_students_projects">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Contact details of the teacher in charge</label>
+  <input type="text" name="contactProjects" required>
+</div>
 
-                <div class="form-group">
-                    <label class="form-label required">Name of the teacher in charge with the students with Science Projects / विज्ञान परियोजनाओं वाले छात्रों के साथ प्रभारी शिक्षक का नाम / سائنسی پروجیکٹس والے طلباء کے ساتھ انچارج استاد کا نام</label>
-                    <input type="text" class="form-control" id="project_teacher_name" name="project_teacher_name" placeholder="Enter teacher name / शिक्षक का नाम दर्ज करें / استاد کا نام درج کریں" required>
-                    <div class="error-message" id="error_project_teacher_name">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+<!-- C. Science Quiz -->
+<div class="section">
+  <h3>C. Science Quiz / C. विज्ञान प्रश्नोत्तरी / C. سائنس کوئز</h3>
+  <label>Class Groups</label>
+  <select name="quizGroups" required>
+    <option value="VI–VIII">VI–VIII</option>
+    <option value="IX–X">IX–X</option>
+  </select>
 
-                <div class="form-group">
-                    <label class="form-label required">Contact details of the teacher in charge (Mobile number and Email ID) / प्रभारी शिक्षक का संपर्क विवरण (मोबाइल नंबर और ईमेल आईडी) / انچارج استاد کے رابطے کی تفصیلات (موبائل نمبر اور ای میل آئی ڈی)</label>
-                    <input type="text" class="form-control" id="project_teacher_contact" name="project_teacher_contact" placeholder="Enter phone &amp; email / फोन और ईमेल दर्ज करें / فون اور ای میل درج کریں" required>
-                    <div class="error-message" id="error_project_teacher_contact">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Number of participants (Maximum 03)</label>
+  <input type="number" name="quizParticipants" required>
 
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" onclick="previousSection()">Previous / पिछला / پچھلا</button>
-                    <button type="button" class="btn btn-primary btn-next" onclick="nextSection()">Next / अगला / اگلا</button>
-                </div>
-            </div>
+  <label>Names of the participating students</label>
+  <textarea name="quizStudents" required></textarea>
 
-            <!-- Section 3: Science Quiz -->
-            <div class="section" data-section="3">
-                <h2 class="section-title">C. Science Quiz / C. विज्ञान प्रश्नोत्तरी / C. سائنس کوئز</h2>
-                
-                <div class="form-group">
-                    <label class="form-label required">Class Groups / कक्षा समूह / کلاس گروپس</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-option">
-                            <input type="checkbox" id="quiz_class_vi_viii" name="quiz_class_group" value="vi_viii">
-                            <label for="quiz_class_vi_viii">VI – VIII / VI – VIII / VI – VIII</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" id="quiz_class_ix_x" name="quiz_class_group" value="ix_x">
-                            <label for="quiz_class_ix_x">IX – X / IX – X / IX – X</label>
-                        </div>
-                    </div>
-                    <div class="error-message" id="error_quiz_class_group">Please select at least one option / कृपया कम से कम एक विकल्प का चयन करें / براہ کرم کم از کم ایک اختیار منتخب کریں</div>
-                </div>
+  <label>Name of the escorting teacher</label>
+  <input type="text" name="quizTeacher" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Number of participants (Maximum 03) / प्रतिभागियों की संख्या (अधिकतम 03) / شرکاء کی تعداد (زیادہ سے زیادہ 03)</label>
-                    <input type="number" class="form-control" id="quiz_participants_count" name="quiz_participants_count" min="1" max="3" placeholder="Enter number (max 3) / संख्या दर्ज करें (अधिकतम 3) / نمبر درج کریں (زیادہ سے زیادہ 3)" required>
-                    <div class="error-message" id="error_quiz_participants_count">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Contact details of the teacher in charge</label>
+  <input type="text" name="quizContact" required>
+</div>
 
-                <div class="form-group">
-                    <label class="form-label required">Names of the participating students / भाग लेने वाले छात्रों के नाम / حصہ لینے والے طلباء کے نام</label>
-                    <textarea class="form-control" id="quiz_students_names" name="quiz_students_names" placeholder="Enter student names / छात्रों के नाम दर्ज करें / طلباء کے نام درج کریں" required></textarea>
-                    <div class="error-message" id="error_quiz_students_names">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+<!-- D. Science Teaching Aid Competition -->
+<div class="section">
+  <h3>D. Science Teaching Aid Competition / D. विज्ञान शिक्षण सहायक प्रतियोगिता / D. سائنس ٹیچنگ ایڈ مقابلہ</h3>
+  <label>Name of the teacher participating</label>
+  <input type="text" name="teachingTeacher" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Name of the escorting teacher / साथ आने वाले शिक्षक का नाम / نگران استاد کا نام</label>
-                    <input type="text" class="form-control" id="quiz_teacher_name" name="quiz_teacher_name" placeholder="Enter teacher name / शिक्षक का नाम दर्ज करें / استاد کا نام درج کریں" required>
-                    <div class="error-message" id="error_quiz_teacher_name">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Name of the teaching aid</label>
+  <input type="text" name="teachingAid" required>
 
-                <div class="form-group">
-                    <label class="form-label required">Contact details of the teacher in charge / प्रभारी शिक्षक का संपर्क विवरण / انچارج استاد کے رابطے کی تفصیلات</label>
-                    <input type="text" class="form-control" id="quiz_teacher_contact" name="quiz_teacher_contact" placeholder="Enter phone &amp; email / फोन और ईमेल दर्ज करें / فون اور ای میل درج کریں" required>
-                    <div class="error-message" id="error_quiz_teacher_contact">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Contact details of the participating teacher</label>
+  <input type="text" name="teachingContact" required>
+</div>
 
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" onclick="previousSection()">Previous / पिछला / پچھلا</button>
-                    <button type="button" class="btn btn-primary btn-next" onclick="nextSection()">Next / अगला / اگلا</button>
-                </div>
-            </div>
+<!-- E. Paper Presentation -->
+<div class="section">
+  <h3>E. Paper Presentation / E. पेपर प्रस्तुति / E. پیپر پریزنٹیشن</h3>
+  <label>Name of the teacher participating</label>
+  <input type="text" name="paperTeacher" required>
 
-            <!-- Section 4: Science Teaching Aid Competition -->
-            <div class="section" data-section="4">
-                <h2 class="section-title">D. Science Teaching Aid Competition / D. विज्ञान शिक्षण सहायक प्रतियोगिता / D. سائنس ٹیچنگ ایڈ مقابلہ</h2>
-                
-                <div class="form-group">
-                    <label class="form-label">Name of the teacher participating (Maximum 01) / भाग लेने वाले शिक्षक का नाम (अधिकतम 01) / حصہ لینے والے استاد کا نام (زیادہ سے زیادہ 01)</label>
-                    <input type="text" class="form-control" id="aid_teacher_name" name="aid_teacher_name" placeholder="Enter teacher name (optional) / शिक्षक का नाम दर्ज करें (वैकल्पिक) / استاد کا نام درج کریں (اختیاری)">
-                    <div class="error-message" id="error_aid_teacher_name">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Paper presentation topic</label>
+  <input type="text" name="paperTopic" required>
 
-                <div class="form-group">
-                    <label class="form-label">Name of the teaching aid / शिक्षण सहायक का नाम / ٹیچنگ ایڈ کا نام</label>
-                    <input type="text" class="form-control" id="teaching_aid_name" name="teaching_aid_name" placeholder="Enter teaching aid name (optional) / शिक्षण सहायक का नाम दर्ज करें (वैकल्पिक) / ٹیچنگ ایڈ کا نام درج کریں (اختیاری)">
-                    <div class="error-message" id="error_teaching_aid_name">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Time required</label>
+  <input type="text" name="paperTime" required>
 
-                <div class="form-group">
-                    <label class="form-label">Contact details of the participating teacher / प्रतिभागी शिक्षक का संपर्क विवरण / حصہ لینے والے استاد کے رابطے کی تفصیلات</label>
-                    <input type="text" class="form-control" id="aid_teacher_contact" name="aid_teacher_contact" placeholder="Enter phone &amp; email (optional) / फोन और ईमेल दर्ज करें (वैकल्पिक) / فون اور ای میل درج کریں (اختیاری)">
-                    <div class="error-message" id="error_aid_teacher_contact">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  <label>Contact details of the participating teacher</label>
+  <input type="text" name="paperContact" required>
+</div>
 
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" onclick="previousSection()">Previous / पिछला / پچھلا</button>
-                    <button type="button" class="btn btn-primary btn-next" onclick="nextSection()">Next / अगला / اگلا</button>
-                </div>
-            </div>
+<!-- F. Declaration -->
+<div class="section">
+  <h3>F. Declaration / F. घोषणा / F. اعلامیہ</h3>
+  <label><input type="checkbox" name="declaration" required> 
+    We hereby confirm our school's participation in the District Level Science Exhibition and agree to abide by the rules and guidelines issued by the host school.<br>
+    हम एतद्द्वारा जिला स्तरीय विज्ञान प्रदर्शनी में अपने स्कूल की भागीदारी की पुष्टि करते हैं और मेजबान स्कूल द्वारा जारी नियमों और दिशानिर्देशों का पालन करने के लिए सहमत हैं।<br>
+    ہم اس کے ذریعے ضلعی سطح کی سائنسی نمائش میں اپنے اسکول کی شرکت کی تصدیق کرتے ہیں اور میزبان اسکول کی طرف سے جاری کردہ قواعد و ضوابط کی پابندی کرنے سے اتفاق کرتے ہیں۔
+  </label>
+</div>
 
-            <!-- Section 5: Paper Presentation -->
-            <div class="section" data-section="5">
-                <h2 class="section-title">E. Paper Presentation / E. पेपर प्रस्तुति / E. پیپر پریزنٹیشن</h2>
-                
-                <div class="form-group">
-                    <label class="form-label">Name of the teacher participating (Maximum 01) / भाग लेने वाले शिक्षक का नाम (अधिकतम 01) / حصہ لینے والے استاد کا نام (زیادہ سے زیادہ 01)</label>
-                    <input type="text" class="form-control" id="paper_teacher_name" name="paper_teacher_name" placeholder="Enter teacher name (optional) / शिक्षक का नाम दर्ज करें (वैकल्पिक) / استاد کا نام درج کریں (اختیاری)">
-                    <div class="error-message" id="error_paper_teacher_name">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+<button type="submit">Submit</button>
+</form>
 
-                <div class="form-group">
-                    <label class="form-label">Paper presentation topic / पेपर प्रस्तुति का विषय / پیپر پریزنٹیشن کا موضوع</label>
-                    <input type="text" class="form-control" id="paper_topic" name="paper_topic" placeholder="Enter topic (optional) / विषय दर्ज करें (वैकल्पिक) / موضوع درج کریں (اختیاری)">
-                    <div class="error-message" id="error_paper_topic">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const form = e.target;
+  const formData = Object.fromEntries(new FormData(form).entries());
 
-                <div class="form-group">
-                    <label class="form-label">Time required / आवश्यक समय / درکار وقت</label>
-                    <input type="text" class="form-control" id="paper_time" name="paper_time" placeholder="Enter time (optional) / समय दर्ज करें (वैकल्पिक) / وقت درج کریں (اختیاری)">
-                    <div class="error-message" id="error_paper_time">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
+  fetch("https://script.google.com/macros/s/AKfycbxq88FdRN8Btl2gdaYCcUjUjbIGV8apXXgc8_nzTY8T3OzDdvnSPNA9gDdV6Spc1wAMOA/exec", {
+    method: "POST",
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.status === "success"){
+      alert("Form submitted successfully!");
+      form.reset();
+    } else {
+      alert("Error submitting form. Try again.");
+    }
+  })
+  .catch(err => alert("Connection error: " + err));
+});
+</script>
 
-                <div class="form-group">
-                    <label class="form-label">Contact details of the participating teacher / प्रतिभागी शिक्षक का संपर्क विवरण / حصہ لینے والے استاد کے رابطے کی تفصیلات</label>
-                    <input type="text" class="form-control" id="paper_teacher_contact" name="paper_teacher_contact" placeholder="Enter phone &amp; email (optional) / फोन और ईमेल दर्ज करें (वैकल्पिक) / فون اور ای میل درج کریں (اختیاری)">
-                    <div class="error-message" id="error_paper_teacher_contact">This field is required / यह क्षेत्र आवश्यक है / یہ فیلڈ ضروری ہے</div>
-                </div>
-
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" onclick="previousSection()">Previous / पिछला / پچھلا</button>
-                    <button type="button" class="btn btn-primary btn-next" onclick="nextSection()">Next / अगला / اگلا</button>
-                </div>
-            </div>
-
-            <!-- Section 6: Declaration -->
-            <div class="section" data-section="6">
-                <h2 class="section-title">F. Declaration / F. घोषणा / F. اعلامیہ</h2>
-                
-                <div class="form-group">
-                    <div class="checkbox-option">
-                        <input type="checkbox" id="declaration" name="declaration" required>
-                        <label for="declaration">
-                            We hereby confirm our school's participation in the District Level Science Exhibition and agree to abide by the rules and guidelines issued by the host school. / हम एतद्द्वारा जिला स्तरीय विज्ञान प्रदर्शनी में अपने स्कूल की भागीदारी की पुष्टि करते हैं और मेजबान स्कूल द्वारा जारी नियमों और दिशानिर्देशों का पालन करने के लिए सहमत हैं। / ہم اس کے ذریعے ضلعی سطح کی سائنسی نمائش میں اپنے اسکول کی شرکت کی تصدیق کرتے ہیں اور میزبان اسکول کی طرف سے جاری کردہ قواعد و ضوابط کی پابندی کرنے سے اتفاق کرتے ہیں۔
-                        </label>
-                    </div>
-                    <div class="error-message" id="error_declaration">You must accept the declaration / आपको घोषणा स्वीकार करनी होगी / آپ کو اعلامیہ قبول کرنا ہوگا</div>
-                </div>
-
-                <div class="form-navigation">
-                    <button type="button" class="btn btn-secondary" onclick="previousSection()">Previous / पिछला / پچھلا</button>
-                    <button type="submit" class="btn btn-primary btn-submit">Submit / जमा करें / جمع کریں</button>
-                </div>
-            </div>
-        </form>
-
-        <div class="success-message" id="successMessage">
-            <div class="success-icon">✓</div>
-            <h2 class="success-title">Form submitted successfully! / फॉर्म सफलतापूर्वक जमा किया गया! / فارم کامیابی سے جمع ہو گیا!</h2>
-            <p class="success-text">Thank you for registering for the District Level Science Exhibition. / जिला स्तरीय विज्ञान प्रदर्शनी के लिए पंजीकरण के लिए धन्यवाद। / ضلعی سطح کی سائنسی نمائش کے لیے رجسٹریشن کے لیے شکریہ۔</p>
-        </div>
-    </div>
-
-    <script>
-        // Translation data
-        const translations = {
-            en: {
-                formTitle: "District Level Science Exhibition Registration Form",
-                formDescription: "(To be filled by the participating schools)",
-                section1Title: "A. School Information",
-                section2Title: "B. Science Projects",
-                section3Title: "C. Science Quiz",
-                section4Title: "D. Science Teaching Aid Competition",
-                section5Title: "E. Paper Presentation",
-                section6Title: "F. Declaration",
-                label_school_name: "Name of the School",
-                label_school_address: "School Address",
-                label_medium: "Medium",
-                label_school_type: "Government / Private school",
-                label_school_type_gov: "Government",
-                label_school_type_pvt: "Private",
-                label_principal_name: "Name of the Principal / Head of Institution",
-                label_school_contact: "Contact Number of the School",
-                label_school_email: "Email ID of the School",
-                label_total_projects: "Total number of projects for display",
-                label_project_title: "Title of any one project (which will be projected/presented on stage)",
-                label_total_students_projects: "Total number of students participating in Science Projects",
-                label_project_teacher_name: "Name of the teacher in charge with the students with Science Projects",
-                label_project_teacher_contact: "Contact details of the teacher in charge (Mobile number and Email ID)",
-                label_quiz_class_group: "Class Groups",
-                label_quiz_class_vi_viii: "VI – VIII",
-                label_quiz_class_ix_x: "IX – X",
-                label_quiz_participants_count: "Number of participants (Maximum 03)",
-                label_quiz_students_names: "Names of the participating students",
-                label_quiz_teacher_name: "Name of the escorting teacher",
-                label_quiz_teacher_contact: "Contact details of the teacher in charge",
-                label_aid_teacher_name: "Name of the teacher participating (Maximum 01)",
-                label_teaching_aid_name: "Name of the teaching aid",
-                label_aid_teacher_contact: "Contact details of the participating teacher",
-                label_paper_teacher_name: "Name of the teacher participating (Maximum 01)",
-                label_paper_topic: "Paper presentation topic",
-                label_paper_time: "Time required",
-                label_paper_teacher_contact: "Contact details of the participating teacher",
-                label_declaration: "We hereby confirm our school's participation in the District Level Science Exhibition and agree to abide by the rules and guidelines issued by the host school.",
-                btnNext: "Next",
-                btnPrev: "Previous",
-                btnSubmit: "Submit",
-                progressText: "Section",
-                progressOf: "of",
-                errorRequired: "This field is required",
-                errorEmail: "Please enter a valid email",
-                errorCheckbox: "Please select at least one option",
-                errorMax: "Maximum value exceeded",
-                errorDeclaration: "You must accept the declaration",
-                successTitle: "Form submitted successfully!",
-                successText: "Thank you for registering for the District Level Science Exhibition."
-            },
-            hi: {
-                formTitle: "ज़िला स्तरीय विज्ञान प्रदर्शनी पंजीकरण फॉर्म",
-                formDescription: "(प्रतिभागी स्कूलों द्वारा भरा जाना है)",
-                section1Title: "A. स्कूल की जानकारी",
-                section2Title: "B. विज्ञान परियोजनाएं",
-                section3Title: "C. विज्ञान प्रश्नोत्तरी",
-                section4Title: "D. विज्ञान शिक्षण सहायक प्रतियोगिता",
-                section5Title: "E. पेपर प्रस्तुति",
-                section6Title: "F. घोषणा",
-                label_school_name: "स्कूल का नाम",
-                label_school_address: "स्कूल का पता",
-                label_medium: "माध्यम",
-                label_school_type: "सरकारी / निजी स्कूल",
-                label_school_type_gov: "सरकारी",
-                label_school_type_pvt: "निजी",
-                label_principal_name: "प्रिंसिपल / संस्था प्रमुख का नाम",
-                label_school_contact: "स्कूल का संपर्क नंबर",
-                label_school_email: "स्कूल का ईमेल आईडी",
-                label_total_projects: "प्रदर्शन के लिए परियोजनाओं की कुल संख्या",
-                label_project_title: "किसी एक परियोजना का शीर्षक (जो मंच पर प्रस्तुत की जाएगी)",
-                label_total_students_projects: "विज्ञान परियोजनाओं में भाग लेने वाले छात्रों की कुल संख्या",
-                label_project_teacher_name: "विज्ञान परियोजनाओं वाले छात्रों के साथ प्रभारी शिक्षक का नाम",
-                label_project_teacher_contact: "प्रभारी शिक्षक का संपर्क विवरण (मोबाइल नंबर और ईमेल आईडी)",
-                label_quiz_class_group: "कक्षा समूह",
-                label_quiz_class_vi_viii: "VI – VIII",
-                label_quiz_class_ix_x: "IX – X",
-                label_quiz_participants_count: "प्रतिभागियों की संख्या (अधिकतम 03)",
-                label_quiz_students_names: "भाग लेने वाले छात्रों के नाम",
-                label_quiz_teacher_name: "साथ आने वाले शिक्षक का नाम",
-                label_quiz_teacher_contact: "प्रभारी शिक्षक का संपर्क विवरण",
-                label_aid_teacher_name: "भाग लेने वाले शिक्षक का नाम (अधिकतम 01)",
-                label_teaching_aid_name: "शिक्षण सहायक का नाम",
-                label_aid_teacher_contact: "प्रतिभागी शिक्षक का संपर्क विवरण",
-                label_paper_teacher_name: "भाग लेने वाले शिक्षक का नाम (अधिकतम 01)",
-                label_paper_topic: "पेपर प्रस्तुति का विषय",
-                label_paper_time: "आवश्यक समय",
-                label_paper_teacher_contact: "प्रतिभागी शिक्षक का संपर्क विवरण",
-                label_declaration: "हम एतद्द्वारा जिला स्तरीय विज्ञान प्रदर्शनी में अपने स्कूल की भागीदारी की पुष्टि करते हैं और मेजबान स्कूल द्वारा जारी नियमों और दिशानिर्देशों का पालन करने के लिए सहमत हैं।",
-                btnNext: "अगला",
-                btnPrev: "पिछला",
-                btnSubmit: "जमा करें",
-                progressText: "अनुभाग",
-                progressOf: "का",
-                errorRequired: "यह क्षेत्र आवश्यक है",
-                errorEmail: "कृपया एक वैध ईमेल दर्ज करें",
-                errorCheckbox: "कृपया कम से कम एक विकल्प का चयन करें",
-                errorMax: "अधिकतम मान अतिक्रमित",
-                errorDeclaration: "आपको घोषणा स्वीकार करनी होगी",
-                successTitle: "फॉर्म सफलतापूर्वक जमा किया गया!",
-                successText: "जिला स्तरीय विज्ञान प्रदर्शनी के लिए पंजीकरण के लिए धन्यवाद।"
-            },
-            ur: {
-                formTitle: "ضلع سطح کی سائنسی نمائش رجسٹریشن فارم",
-                formDescription: "(حصہ لینے والے اسکولوں کے ذریعہ بھرا جائے)",
-                section1Title: "A. اسکول کی معلومات",
-                section2Title: "B. سائنسی پروجیکٹس",
-                section3Title: "C. سائنس کوئز",
-                section4Title: "D. سائنس ٹیچنگ ایڈ مقابلہ",
-                section5Title: "E. پیپر پریزنٹیشن",
-                section6Title: "F. اعلامیہ",
-                label_school_name: "اسکول کا نام",
-                label_school_address: "اسکول کا پتہ",
-                label_medium: "میڈیم",
-                label_school_type: "سرکاری / پرائیویٹ اسکول",
-                label_school_type_gov: "سرکاری",
-                label_school_type_pvt: "پرائیویٹ",
-                label_principal_name: "پرنسپل / ادارے کے سربراہ کا نام",
-                label_school_contact: "اسکول کا رابطہ نمبر",
-                label_school_email: "اسکول کا ای میل آئی ڈی",
-                label_total_projects: "نمائش کے لیے پروجیکٹس کی کل تعداد",
-                label_project_title: "کسی ایک پروجیکٹ کا عنوان (جسے اسٹیج پر پیش کیا جائے گا)",
-                label_total_students_projects: "سائنسی پروجیکٹس میں حصہ لینے والے طلباء کی کل تعداد",
-                label_project_teacher_name: "سائنسی پروجیکٹس والے طلباء کے ساتھ انچارج استاد کا نام",
-                label_project_teacher_contact: "انچارج استاد کے رابطے کی تفصیلات (موبائل نمبر اور ای میل آئی ڈی)",
-                label_quiz_class_group: "کلاس گروپس",
-                label_quiz_class_vi_viii: "VI – VIII",
-                label_quiz_class_ix_x: "IX – X",
-                label_quiz_participants_count: "شرکاء کی تعداد (زیادہ سے زیادہ 03)",
-                label_quiz_students_names: "حصہ لینے والے طلباء کے نام",
-                label_quiz_teacher_name: "نگران استاد کا نام",
-                label_quiz_teacher_contact: "انچارج استاد کے رابطے کی تفصیلات",
-                label_aid_teacher_name: "حصہ لینے والے استاد کا نام (زیادہ سے زیادہ 01)",
-                label_teaching_aid_name: "ٹیچنگ ایڈ کا نام",
-                label_aid_teacher_contact: "حصہ لینے والے استاد کے رابطے کی تفصیلات",
-                label_paper_teacher_name: "حصہ لینے والے استاد کا نام (زیادہ سے زیادہ 01)",
-                label_paper_topic: "پیپر پریزنٹیشن کا موضوع",
-                label_paper_time: "درکار وقت",
-                label_paper_teacher_contact: "حصہ لینے والے استاد کے رابطے کی تفصیلات",
-                label_declaration: "ہم اس کے ذریعے ضلعی سطح کی سائنسی نمائش میں اپنے اسکول کی شرکت کی تصدیق کرتے ہیں اور میزبان اسکول کی طرف سے جاری کردہ قواعد و ضوابط کی پابندی کرنے سے اتفاق کرتے ہیں۔",
-                btnNext: "اگلا",
-                btnPrev: "پچھلا",
-                btnSubmit: "جمع کریں",
-                progressText: "سیکشن",
-                progressOf: "کا",
-                errorRequired: "یہ فیلڈ ضروری ہے",
-                errorEmail: "براہ کرم ایک درست ای میل درج کریں",
-                errorCheckbox: "براہ کرم کم از کم ایک اختیار منتخب کریں",
-                errorMax: "زیادہ سے زیادہ قیمت سے تجاوز",
-                errorDeclaration: "آپ کو اعلامیہ قبول کرنا ہوگا",
-                successTitle: "فارم کامیابی سے جمع ہو گیا!",
-                successText: "ضلعی سطح کی سائنسی نمائش کے لیے رجسٹریشن کے لیے شکریہ۔"
-            }
-        };
-
-        let currentSection = 1;
-        let currentLanguage = 'en';
-        const totalSections = 6;
-
-        // Change language function
-        function changeLanguage(lang) {
-            currentLanguage = lang;
-            
-            // Update active button
-            document.querySelectorAll('.language-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                }
-            });
-
-            // Update all text content
-            const t = translations[lang];
-            document.getElementById('formTitle').textContent = t.formTitle;
-            document.getElementById('formDescription').textContent = t.formDescription;
-            
-            // Update section titles
-            for (let i = 1; i <= 6; i++) {
-                document.getElementById(`section${i}Title`).textContent = t[`section${i}Title`];
-            }
-
-            // Update all labels
-            Object.keys(t).forEach(key => {
-                if (key.startsWith('label_')) {
-                    const element = document.getElementById(key);
-                    if (element) {
-                        element.textContent = t[key];
-                    }
-                }
-            });
-
-            // Update buttons
-            document.querySelectorAll('[id^="btnNext"]').forEach(btn => {
-                btn.textContent = t.btnNext;
-            });
-            document.querySelectorAll('[id^="btnPrev"]').forEach(btn => {
-                btn.textContent = t.btnPrev;
-            });
-            document.getElementById('btnSubmit').textContent = t.btnSubmit;
-
-            // Update progress indicator
-            updateProgress();
-
-            // Update error messages
-            document.getElementById('error_school_email').textContent = t.errorEmail;
-            document.getElementById('error_quiz_class_group').textContent = t.errorCheckbox;
-            document.getElementById('error_declaration').textContent = t.errorDeclaration;
-            
-            // Update generic error messages
-            document.querySelectorAll('.error-message').forEach(el => {
-                if (el.id !== 'error_school_email' && el.id !== 'error_quiz_class_group' && el.id !== 'error_declaration') {
-                    el.textContent = t.errorRequired;
-                }
-            });
-
-            // Update success message
-            document.getElementById('successTitle').textContent = t.successTitle;
-            document.getElementById('successText').textContent = t.successText;
-        }
-
-        // Update progress indicator
-        function updateProgress() {
-            document.getElementById('progressText').textContent = `Section ${currentSection} of 6 / अनुभाग ${currentSection} का 6 / سیکشن ${currentSection} کا 6`;
-        }
-
-        // Validate section
-        function validateSection(sectionNum) {
-            const section = document.querySelector(`.section[data-section="${sectionNum}"]`);
-            const inputs = section.querySelectorAll('input[required], textarea[required]');
-            let isValid = true;
-
-            inputs.forEach(input => {
-                const errorElement = document.getElementById(`error_${input.id}`);
-                
-                // Clear previous errors
-                input.classList.remove('error');
-                if (errorElement) {
-                    errorElement.classList.remove('visible');
-                }
-
-                if (input.type === 'radio') {
-                    const radioGroup = section.querySelectorAll(`input[name="${input.name}"]`);
-                    const isChecked = Array.from(radioGroup).some(radio => radio.checked);
-                    if (!isChecked) {
-                        isValid = false;
-                        const firstRadio = radioGroup[0];
-                        const errorEl = document.getElementById(`error_${input.name}`);
-                        if (errorEl) {
-                            errorEl.classList.add('visible');
-                        }
-                    }
-                } else if (input.type === 'checkbox' && input.name === 'quiz_class_group') {
-                    const checkboxGroup = section.querySelectorAll('input[name="quiz_class_group"]');
-                    const isChecked = Array.from(checkboxGroup).some(cb => cb.checked);
-                    if (!isChecked) {
-                        isValid = false;
-                        const errorEl = document.getElementById('error_quiz_class_group');
-                        if (errorEl) {
-                            errorEl.classList.add('visible');
-                        }
-                    }
-                } else if (input.type === 'checkbox' && input.id === 'declaration') {
-                    if (!input.checked) {
-                        isValid = false;
-                        if (errorElement) {
-                            errorElement.classList.add('visible');
-                        }
-                    }
-                } else if (input.type === 'email') {
-                    if (!input.value.trim()) {
-                        isValid = false;
-                        input.classList.add('error');
-                        if (errorElement) {
-                            errorElement.classList.add('visible');
-                        }
-                    } else if (!input.validity.valid) {
-                        isValid = false;
-                        input.classList.add('error');
-                        if (errorElement) {
-                            errorElement.classList.add('visible');
-                        }
-                    }
-                } else if (input.type === 'number') {
-                    if (!input.value.trim()) {
-                        isValid = false;
-                        input.classList.add('error');
-                        if (errorElement) {
-                            errorElement.classList.add('visible');
-                        }
-                    } else if (input.max && parseInt(input.value) > parseInt(input.max)) {
-                        isValid = false;
-                        input.classList.add('error');
-                        if (errorElement) {
-                            errorElement.classList.add('visible');
-                        }
-                    }
-                } else {
-                    if (!input.value.trim()) {
-                        isValid = false;
-                        input.classList.add('error');
-                        if (errorElement) {
-                            errorElement.classList.add('visible');
-                        }
-                    }
-                }
-            });
-
-            return isValid;
-        }
-
-        // Next section
-        function nextSection() {
-            if (validateSection(currentSection)) {
-                document.querySelector(`.section[data-section="${currentSection}"]`).classList.remove('active');
-                currentSection++;
-                document.querySelector(`.section[data-section="${currentSection}"]`).classList.add('active');
-                updateProgress();
-                window.scrollTo(0, 0);
-            }
-        }
-
-        // Previous section
-        function previousSection() {
-            document.querySelector(`.section[data-section="${currentSection}"]`).classList.remove('active');
-            currentSection--;
-            document.querySelector(`.section[data-section="${currentSection}"]`).classList.add('active');
-            updateProgress();
-            window.scrollTo(0, 0);
-        }
-
-        // Form submission
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            if (validateSection(currentSection)) {
-                // Hide form
-                document.getElementById('registrationForm').style.display = 'none';
-                document.querySelector('.progress-indicator').style.display = 'none';
-                
-                // Show success message
-                document.getElementById('successMessage').classList.add('visible');
-                window.scrollTo(0, 0);
-            }
-        });
-
-        // Initialize
-        updateProgress();
-    </script>
 </body>
 </html>
